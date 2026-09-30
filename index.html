@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiran Academy | IT Training & Placement Institute in Pune</title>
+<meta name="description" content="Job-oriented Python, Java, Testing and Data Science training in Pune with placement support. Book a free demo class.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="notice" id="notice">
+  <p><b>Campus drive:</b> Software Tester, 06 Oct, Kothrud, Pune. 3.5 LPA CTC</p>
+  <a href="#enquire" class="btn btn-sm btn-orange">Register now</a>
+  <button aria-label="Dismiss" id="closeNotice">&times;</button>
+</div>
+
+<div class="topbar">
+  <span>Karve Nagar <a href="tel:+918888809416">+91 8888809416</a></span>
+  <span>Hadapsar <a href="tel:+919673107070">+91 9673107070</a></span>
+  <span>Chinchwad <a href="tel:+918857055009">+91 8857055009</a></span>
+  <span>Nagpur <a href="tel:+919529204783">+91 9529204783</a></span>
+</div>
+
+<header class="site-header">
+  <a href="#" class="logo"><i>K</i><span>Kiran Academy<small>IT Training Institute</small></span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">Menu</button>
+  <nav id="nav">
+    <a href="#courses">Courses</a>
+    <a href="#why">Why us</a>
+    <a href="#placements">Placements</a>
+    <a href="#stories">Success stories</a>
+    <a href="#faq">FAQ</a>
+    <a href="#branches">Contact</a>
+    <a href="#enquire" class="btn btn-sm btn-blue">Free demo class</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="badge"><span class="dot"></span>Trusted IT training in Pune since 2012</p>
+    <h1>Build a career in software with training that ends in a job.</h1>
+    <p class="lead">Learn from working professionals, build real projects, and get interview and placement support until you are hired.</p>
+    <div class="hero-cta">
+      <a href="#enquire" class="btn btn-orange">Book a free demo</a>
+      <a href="#courses" class="btn btn-ghost">Explore courses</a>
+    </div>
+    <ul class="trust">
+      <li><b>10,000+</b>students trained</li>
+      <li><b>500+</b>hiring partners</li>
+      <li><b>4 to 6</b>months to job-ready</li>
+    </ul>
+  </div>
+
+  <form class="card form" id="enquire" novalidate>
+    <div class="form-head"><h2>Book a free demo class</h2><p>No payment. No commitment. A counsellor will call you.</p></div>
+    <div class="form-body">
+      <label>Full name<input name="name" type="text" autocomplete="name" placeholder="Your full name" required></label>
+      <label>Mobile number<input name="mobile" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel" placeholder="10-digit mobile number" required></label>
+      <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+      <label>Course
+        <select name="course" id="courseSelect">
+          <option value="">Choose a course</option>
+          <option>Python Full Stack</option><option>Java Full Stack</option><option>Software Testing</option><option>Data Science with Python</option><option>Web Development</option>
+        </select>
+      </label>
+      <label>Message (optional)<textarea name="message" rows="2"></textarea></label>
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-blue btn-block" type="submit" id="submitBtn">Request my demo class on WhatsApp</button>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+
+<section class="quick-highlights" aria-label="Institute highlights">
+  <div class="highlight-card">
+    <span class="highlight-icon">01</span>
+    <h3>Career-focused courses</h3>
+    <p>Industry-ready programmes in software testing, Python, Java, web development and data science.</p>
+  </div>
+  <div class="highlight-card">
+    <span class="highlight-icon">02</span>
+    <h3>Placement support</h3>
+    <p>Resume preparation, mock interviews, job alerts and assistance through campus placements.</p>
+  </div>
+  <div class="highlight-card">
+    <span class="highlight-icon">03</span>
+    <h3>Live project learning</h3>
+    <p>Practice on real assignments and build portfolio work that helps you get interview-ready.</p>
+  </div>
+  <div class="highlight-card">
+    <span class="highlight-icon">04</span>
+    <h3>Mentor guidance</h3>
+    <p>Learn from trainers who help you choose the right course and stay on track with your goals.</p>
+  </div>
+</section>
+
+<section class="logos" aria-label="Hiring partners">
+  <p>Our students work at</p>
+  <ul><li>Infosys</li><li>TCS</li><li>Wipro</li><li>Cognizant</li><li>Capgemini</li><li>Persistent</li></ul>
+</section>
+
+<section class="section" id="courses">
+  <div class="head"><h2>Courses built around what employers hire for</h2><p>Every course includes live projects, mock interviews and placement support.</p></div>
+  <div class="grid">
+    <article class="course"><span class="ico">Py</span><h3>Python Full Stack</h3><p>Python, Django, SQL and front-end basics with two live projects.</p><ul class="meta"><li>5 months</li><li>Classroom and online</li></ul><button data-course="Python Full Stack">Get course details</button></article>
+    <article class="course"><span class="ico">Jv</span><h3>Java Full Stack</h3><p>Core Java, Spring Boot, REST APIs, React and MySQL.</p><ul class="meta"><li>6 months</li><li>Classroom and online</li></ul><button data-course="Java Full Stack">Get course details</button></article>
+    <article class="course"><span class="ico">QA</span><h3>Software Testing</h3><p>Manual testing, Selenium automation, SQL and Agile practice.</p><ul class="meta"><li>4 months</li><li>Classroom and online</li></ul><button data-course="Software Testing">Get course details</button></article>
+    <article class="course"><span class="ico">DS</span><h3>Data Science with Python</h3><p>Pandas, statistics, machine learning and dashboards on real data.</p><ul class="meta"><li>6 months</li><li>Classroom and online</li></ul><button data-course="Data Science with Python">Get course details</button></article>
+    <article class="course"><span class="ico">Web</span><h3>Web Development</h3><p>HTML, CSS, JavaScript and Node.js. Build and publish real sites.</p><ul class="meta"><li>4 months</li><li>Classroom and online</li></ul><button data-course="Web Development">Get course details</button></article>
+    <article class="course course-cta"><h3>Not sure which course?</h3><p>A counsellor will match a course to your background in 10 minutes.</p><a href="#enquire" class="btn btn-orange btn-sm">Talk to a counsellor</a></article>
+  </div>
+</section>
+
+<section class="section band" id="why">
+  <div class="head"><h2>Why students choose Kiran Academy</h2></div>
+  <div class="grid">
+    <div class="feat"><h3>Trainers from the industry</h3><p>Learn from people who write and ship software every day.</p></div>
+    <div class="feat"><h3>Live project experience</h3><p>Build projects you can show and explain in interviews.</p></div>
+    <div class="feat"><h3>Interview preparation</h3><p>Resume reviews, aptitude practice and mock interviews.</p></div>
+    <div class="feat"><h3>Placement support</h3><p>Campus drives, referrals and job alerts through our hiring partners.</p></div>
+  </div>
+</section>
+
+<section class="section" id="placements">
+  <div class="head"><h2>From first class to first offer</h2></div>
+  <ol class="steps">
+    <li><h3>Learn</h3><p>Trainer-led classes with daily practice.</p></li>
+    <li><h3>Build</h3><p>Two live projects for your portfolio.</p></li>
+    <li><h3>Prepare</h3><p>Resume review and mock interviews.</p></li>
+    <li><h3>Get hired</h3><p>Campus drives and partner referrals.</p></li>
+  </ol>
+</section>
+
+<section class="section band" id="stories">
+  <div class="head"><h2>Success stories</h2><p>Replace these with real student quotes, names and companies.</p></div>
+  <div class="grid three">
+    <figure class="quote"><blockquote>Student testimonial goes here. Mention the course and the job they got.</blockquote><figcaption><i>A</i><span>Student name<small>Role, Company</small></span></figcaption></figure>
+    <figure class="quote"><blockquote>Student testimonial goes here. Mention the course and the job they got.</blockquote><figcaption><i>B</i><span>Student name<small>Role, Company</small></span></figcaption></figure>
+    <figure class="quote"><blockquote>Student testimonial goes here. Mention the course and the job they got.</blockquote><figcaption><i>C</i><span>Student name<small>Role, Company</small></span></figcaption></figure>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="head"><h2>Questions students ask</h2></div>
+  <div class="faq">
+    <details><summary>Do I need a coding background?</summary><p>No. Our courses start from the basics, and a counsellor will suggest the right batch for your level.</p></details>
+    <details><summary>Is placement support included?</summary><p>Yes. Interview preparation and access to campus drives are part of every course.</p></details>
+    <details><summary>Can I attend online?</summary><p>Yes, online and classroom batches are available for most courses.</p></details>
+    <details><summary>How do I try a class first?</summary><p>Fill in the demo form. We will call you and schedule a free class.</p></details>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to start your IT career?</h2>
+  <p>Attend a free demo class and meet your trainers before you decide.</p>
+  <a href="#enquire" class="btn btn-orange">Book a free demo</a>
+</section>
+</main>
+
+<footer id="branches">
+  <div class="fgrid">
+    <div><a href="#" class="logo light"><i>K</i><span>Kiran Academy</span></a><p>IT training and placement institute in Pune since 2012.</p></div>
+    <div><h4>Branches</h4><p>Karve Nagar, Pune<br>Hadapsar, Pune<br>Chinchwad, Pune<br>Nagpur</p></div>
+    <div><h4>Call us</h4><p><a href="tel:+918888809416">+91 8888809416</a><br><a href="tel:+919673107070">+91 9673107070</a><br><a href="tel:+918857055009">+91 8857055009</a><br><a href="tel:+919529204783">+91 9529204783</a></p></div>
+    <div><h4>Quick links</h4><p><a href="#courses">Courses</a><br><a href="#stories">Success stories</a><br><a href="#faq">FAQ</a><br><a href="#enquire">Free demo</a></p></div>
+  </div>
+  <p class="copy">&copy; <span id="yr"></span> Kiran Academy. All rights reserved.</p>
+</footer>
+
+<a class="wa" href="https://wa.me/918888809416" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">Chat on WhatsApp</a>
+<script src="script.js"></script>
+</body>
+</html>
