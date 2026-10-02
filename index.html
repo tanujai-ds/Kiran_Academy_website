@@ -7,13 +7,15 @@
 <meta name="description" content="Job-oriented Python, Java, Testing and Data Science training in Pune with placement support. Book a free demo class.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="app.css">
 </head>
 <body>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
 <div class="notice" id="notice">
-  <p><b>Campus drive:</b> Software Tester, 06 Oct, Kothrud, Pune. 3.5 LPA CTC</p>
-  <a href="#enquire" class="btn btn-sm btn-orange">Register now</a>
+  <p><b>Campus drive:</b> Software Tester · 06 Oct · Kothrud, Pune · 3.5 LPA CTC</p>
+  <a href="#enquire" class="btn btn-sm btn-gold">Register now</a>
   <button aria-label="Dismiss" id="closeNotice">&times;</button>
 </div>
 
@@ -29,6 +31,8 @@
   <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">Menu</button>
   <nav id="nav">
     <a href="#courses">Courses</a>
+    <a href="#tracks">Tracks</a>
+    <a href="#classroom">Classroom</a>
     <a href="#why">Why us</a>
     <a href="#placements">Placements</a>
     <a href="#stories">Success stories</a>
@@ -40,22 +44,23 @@
 
 <main>
 <section class="hero">
-  <div class="hero-copy">
+  <div class="stars" aria-hidden="true"></div>
+  <div class="hero-copy reveal">
     <p class="badge"><span class="dot"></span>Trusted IT training in Pune since 2012</p>
-    <h1>Build a career in software with training that ends in a job.</h1>
-    <p class="lead">Learn from working professionals, build real projects, and get interview and placement support until you are hired.</p>
+    <h1>Launch a <span class="hero-accent">software career</span> that actually gets you hired.</h1>
+    <p class="lead">Learn from working professionals, ship live projects, and stay in placement support until you receive an offer. Classroom and online batches across Pune and Nagpur.</p>
     <div class="hero-cta">
-      <a href="#enquire" class="btn btn-orange">Book a free demo</a>
+      <a href="#enquire" class="btn btn-gold">Book a free demo</a>
       <a href="#courses" class="btn btn-ghost">Explore courses</a>
     </div>
     <ul class="trust">
-      <li><b>10,000+</b>students trained</li>
-      <li><b>500+</b>hiring partners</li>
-      <li><b>4 to 6</b>months to job-ready</li>
+      <li><b data-count="10000" data-suffix="+">0</b>students trained</li>
+      <li><b data-count="500" data-suffix="+">0</b>hiring partners</li>
+      <li><b data-count="6" data-prefix="4–">0</b>months to job-ready</li>
     </ul>
   </div>
 
-  <form class="card form" id="enquire" novalidate>
+  <form class="card form reveal" id="enquire" novalidate>
     <div class="form-head"><h2>Book a free demo class</h2><p>No payment. No commitment. A counsellor will call you.</p></div>
     <div class="form-body">
       <label>Full name<input name="name" type="text" autocomplete="name" placeholder="Your full name" required></label>
@@ -64,10 +69,24 @@
       <label>Course
         <select name="course" id="courseSelect">
           <option value="">Choose a course</option>
-          <option>Python Full Stack</option><option>Java Full Stack</option><option>Software Testing</option><option>Data Science with Python</option><option>Web Development</option>
+          <option>Python Full Stack</option>
+          <option>Java Full Stack</option>
+          <option>Software Testing</option>
+          <option>Data Science with Python</option>
+          <option>Web Development</option>
         </select>
       </label>
-      <label>Message (optional)<textarea name="message" rows="2"></textarea></label>
+      <label>Preferred branch
+        <select name="branch">
+          <option value="">Any campus</option>
+          <option>Karve Nagar</option>
+          <option>Hadapsar</option>
+          <option>Chinchwad</option>
+          <option>Nagpur</option>
+          <option>Online</option>
+        </select>
+      </label>
+      <label>Message (optional)<textarea name="message" rows="2" placeholder="Tell us your background or preferred batch time"></textarea></label>
       <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn btn-blue btn-block" type="submit" id="submitBtn">Request my demo class on WhatsApp</button>
       <p class="status" id="status" role="status" aria-live="polite"></p>
@@ -76,97 +95,271 @@
 </section>
 
 <section class="quick-highlights" aria-label="Institute highlights">
-  <div class="highlight-card">
+  <div class="highlight-card reveal">
     <span class="highlight-icon">01</span>
     <h3>Career-focused courses</h3>
-    <p>Industry-ready programmes in software testing, Python, Java, web development and data science.</p>
+    <p>Industry-ready programmes in software testing, Python, Java, web development and data science — mapped to what Pune employers actually hire for.</p>
   </div>
-  <div class="highlight-card">
+  <div class="highlight-card reveal">
     <span class="highlight-icon">02</span>
     <h3>Placement support</h3>
-    <p>Resume preparation, mock interviews, job alerts and assistance through campus placements.</p>
+    <p>Resume labs, mock interviews, job alerts and campus drives until you convert an offer. Dedicated placement coordinators at every branch.</p>
   </div>
-  <div class="highlight-card">
+  <div class="highlight-card reveal">
     <span class="highlight-icon">03</span>
     <h3>Live project learning</h3>
-    <p>Practice on real assignments and build portfolio work that helps you get interview-ready.</p>
+    <p>Build two portfolio projects per course, present them like a product demo, and walk into interviews with work you can explain.</p>
   </div>
-  <div class="highlight-card">
+  <div class="highlight-card reveal">
     <span class="highlight-icon">04</span>
     <h3>Mentor guidance</h3>
-    <p>Learn from trainers who help you choose the right course and stay on track with your goals.</p>
+    <p>Trainers help you pick the right track, keep weekly goals, and stay accountable from first class to first joining letter.</p>
+  </div>
+</section>
+
+<section class="course-showcase" id="tracks" aria-label="Career tracks">
+  <div class="head reveal">
+    <p class="eyebrow">Choose your direction</p>
+    <h2>Explore the tracks that turn curiosity into a career.</h2>
+    <p>Browse the dummy course previews, then jump straight to the matching syllabus and demo form.</p>
+  </div>
+  <div class="course-gallery">
+    <button class="track-card" type="button" data-jump="Python Full Stack">
+      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80" alt="Laptop showing Python code" loading="lazy" width="900" height="520">
+      <span><b>Python Full Stack</b><small>5 months · 2 live projects</small></span>
+    </button>
+    <button class="track-card" type="button" data-jump="Java Full Stack">
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80" alt="Java development workspace" loading="lazy" width="900" height="520">
+      <span><b>Java Full Stack</b><small>6 months · Spring Boot + React</small></span>
+    </button>
+    <button class="track-card" type="button" data-jump="Software Testing">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Team reviewing software testing" loading="lazy" width="900" height="520">
+      <span><b>Software Testing</b><small>4 months · Selenium + API testing</small></span>
+    </button>
+    <button class="track-card" type="button" data-jump="Data Science with Python">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Data science dashboard with charts" loading="lazy" width="900" height="520">
+      <span><b>Data Science</b><small>6 months · ML + dashboards</small></span>
+    </button>
+    <button class="track-card" type="button" data-jump="Web Development">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Web developer workspace" loading="lazy" width="900" height="520">
+      <span><b>Web Development</b><small>4 months · HTML, CSS + JavaScript</small></span>
+    </button>
   </div>
 </section>
 
 <section class="logos" aria-label="Hiring partners">
   <p>Our students work at</p>
-  <ul><li>Infosys</li><li>TCS</li><li>Wipro</li><li>Cognizant</li><li>Capgemini</li><li>Persistent</li></ul>
+  <div class="marquee" aria-hidden="false">
+    <ul>
+      <li>Infosys</li><li>TCS</li><li>Wipro</li><li>Cognizant</li><li>Capgemini</li><li>Persistent</li>
+      <li>Accenture</li><li>Tech Mahindra</li><li>HCLTech</li><li>LTIMindtree</li>
+      <li>Infosys</li><li>TCS</li><li>Wipro</li><li>Cognizant</li><li>Capgemini</li><li>Persistent</li>
+      <li>Accenture</li><li>Tech Mahindra</li><li>HCLTech</li><li>LTIMindtree</li>
+    </ul>
+  </div>
 </section>
 
 <section class="section" id="courses">
-  <div class="head"><h2>Courses built around what employers hire for</h2><p>Every course includes live projects, mock interviews and placement support.</p></div>
+  <div class="head reveal">
+    <h2>Courses built around what employers hire for</h2>
+    <p>Every programme includes live classes, two projects, aptitude practice, mock interviews and placement support. Hover a card to see the stack you will ship.</p>
+  </div>
   <div class="grid">
-    <article class="course"><span class="ico">Py</span><h3>Python Full Stack</h3><p>Python, Django, SQL and front-end basics with two live projects.</p><ul class="meta"><li>5 months</li><li>Classroom and online</li></ul><button data-course="Python Full Stack">Get course details</button></article>
-    <article class="course"><span class="ico">Jv</span><h3>Java Full Stack</h3><p>Core Java, Spring Boot, REST APIs, React and MySQL.</p><ul class="meta"><li>6 months</li><li>Classroom and online</li></ul><button data-course="Java Full Stack">Get course details</button></article>
-    <article class="course"><span class="ico">QA</span><h3>Software Testing</h3><p>Manual testing, Selenium automation, SQL and Agile practice.</p><ul class="meta"><li>4 months</li><li>Classroom and online</li></ul><button data-course="Software Testing">Get course details</button></article>
-    <article class="course"><span class="ico">DS</span><h3>Data Science with Python</h3><p>Pandas, statistics, machine learning and dashboards on real data.</p><ul class="meta"><li>6 months</li><li>Classroom and online</li></ul><button data-course="Data Science with Python">Get course details</button></article>
-    <article class="course"><span class="ico">Web</span><h3>Web Development</h3><p>HTML, CSS, JavaScript and Node.js. Build and publish real sites.</p><ul class="meta"><li>4 months</li><li>Classroom and online</li></ul><button data-course="Web Development">Get course details</button></article>
-    <article class="course course-cta"><h3>Not sure which course?</h3><p>A counsellor will match a course to your background in 10 minutes.</p><a href="#enquire" class="btn btn-orange btn-sm">Talk to a counsellor</a></article>
+    <article class="course reveal">
+      <img class="course-image" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80" alt="Laptop showing code for Python development" loading="lazy" width="900" height="520">
+      <span class="ico">Py</span>
+      <h3>Python Full Stack</h3>
+      <p>Python, Django, REST APIs, SQL and front-end basics. Ideal if you want product and startup roles fast.</p>
+      <ul class="stack"><li>Python</li><li>Django</li><li>PostgreSQL</li><li>HTML/CSS/JS</li></ul>
+      <ul class="meta"><li>5 months</li><li>Classroom + online</li><li>2 live projects</li></ul>
+      <button data-course="Python Full Stack">Get course details</button>
+    </article>
+    <article class="course reveal">
+      <img class="course-image" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80" alt="Developer working with Java code on a laptop" loading="lazy" width="900" height="520">
+      <span class="ico">Jv</span>
+      <h3>Java Full Stack</h3>
+      <p>Core Java, Spring Boot, REST APIs, React and MySQL — the stack most Pune product and service companies still run.</p>
+      <ul class="stack"><li>Core Java</li><li>Spring Boot</li><li>React</li><li>MySQL</li></ul>
+      <ul class="meta"><li>6 months</li><li>Classroom + online</li><li>2 live projects</li></ul>
+      <button data-course="Java Full Stack">Get course details</button>
+    </article>
+    <article class="course reveal">
+      <img class="course-image" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Software team reviewing a testing workflow" loading="lazy" width="900" height="520">
+      <span class="ico">QA</span>
+      <h3>Software Testing</h3>
+      <p>Manual testing, Selenium, TestNG, SQL and Agile. High demand for testers with automation plus domain thinking.</p>
+      <ul class="stack"><li>Manual QA</li><li>Selenium</li><li>API testing</li><li>Jira / Agile</li></ul>
+      <ul class="meta"><li>4 months</li><li>Classroom + online</li><li>2 live projects</li></ul>
+      <button data-course="Software Testing">Get course details</button>
+    </article>
+    <article class="course reveal">
+      <img class="course-image" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Data analytics dashboard with charts" loading="lazy" width="900" height="520">
+      <span class="ico">DS</span>
+      <h3>Data Science with Python</h3>
+      <p>Pandas, statistics, machine learning and dashboards on real datasets. Present insights, not just notebooks.</p>
+      <ul class="stack"><li>Pandas</li><li>ML basics</li><li>SQL</li><li>Power BI</li></ul>
+      <ul class="meta"><li>6 months</li><li>Classroom + online</li><li>2 live projects</li></ul>
+      <button data-course="Data Science with Python">Get course details</button>
+    </article>
+    <article class="course reveal">
+      <img class="course-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Web developer workspace with code editor" loading="lazy" width="900" height="520">
+      <span class="ico">Web</span>
+      <h3>Web Development</h3>
+      <p>HTML, CSS, JavaScript and Node.js. Build, host and demo real sites — including this kind of interactive landing page.</p>
+      <ul class="stack"><li>HTML/CSS</li><li>JavaScript</li><li>Node.js</li><li>Git</li></ul>
+      <ul class="meta"><li>4 months</li><li>Classroom + online</li><li>2 live projects</li></ul>
+      <button data-course="Web Development">Get course details</button>
+    </article>
+    <article class="course course-cta reveal">
+      <h3>Not sure which course?</h3>
+      <p>Share your degree, work history and target salary. A counsellor maps a track in about 10 minutes — no hard sell.</p>
+      <a href="#enquire" class="btn btn-gold btn-sm">Talk to a counsellor</a>
+    </article>
+  </div>
+</section>
+
+<section class="section classroom-section" id="classroom">
+  <div class="classroom-grid">
+    <div class="classroom reveal" aria-hidden="true">
+      <div class="board">
+        <span class="board-title">Live class · Python</span>
+        <pre id="typedCode" class="typed-code"></pre>
+        <span class="cursor"></span>
+      </div>
+      <div class="teacher">
+        <div class="teacher-head"></div>
+        <div class="teacher-body"></div>
+        <div class="pointer"></div>
+      </div>
+      <div class="desks">
+        <div class="student s1"></div>
+        <div class="student s2"></div>
+        <div class="student s3"></div>
+      </div>
+      <div class="float-notes">
+        <span>if / else</span><span>API</span><span>SQL</span><span>Git</span>
+      </div>
+    </div>
+    <div class="classroom-copy reveal">
+      <p class="eyebrow">Teaching that feels like a real team</p>
+      <h2>Watch how a Kiran Academy class actually runs</h2>
+      <p>Trainers write code on the board, pause for questions, and assign practice the same day. You do not sit through slide decks — you leave with notes you can run on your laptop.</p>
+      <ul class="check-list">
+        <li>Daily live coding with doubt-solving in the last 20 minutes</li>
+        <li>Weekend revision labs for working professionals</li>
+        <li>Recorded recap for classroom and online batches</li>
+        <li>Project reviews that mimic a real sprint demo</li>
+      </ul>
+      <a href="#enquire" class="btn btn-blue">Sit in a free demo class</a>
+    </div>
   </div>
 </section>
 
 <section class="section band" id="why">
-  <div class="head"><h2>Why students choose Kiran Academy</h2></div>
+  <div class="head reveal">
+    <h2>Why students choose Kiran Academy</h2>
+    <p>Four campuses, weekday and weekend batches, and a placement desk that tracks every student by name — not by spreadsheet row.</p>
+  </div>
   <div class="grid">
-    <div class="feat"><h3>Trainers from the industry</h3><p>Learn from people who write and ship software every day.</p></div>
-    <div class="feat"><h3>Live project experience</h3><p>Build projects you can show and explain in interviews.</p></div>
-    <div class="feat"><h3>Interview preparation</h3><p>Resume reviews, aptitude practice and mock interviews.</p></div>
-    <div class="feat"><h3>Placement support</h3><p>Campus drives, referrals and job alerts through our hiring partners.</p></div>
+    <div class="feat reveal"><h3>Trainers from the industry</h3><p>Learn from people who write and ship software. They teach the shortcuts they actually use in production, not textbook-only theory.</p></div>
+    <div class="feat reveal"><h3>Live project experience</h3><p>Two projects per course with Git, documentation and a demo. Interviewers ask “what did you build?” — you will have an answer.</p></div>
+    <div class="feat reveal"><h3>Interview preparation</h3><p>Resume reviews, aptitude drills, HR rounds and technical mocks with feedback you can action the same week.</p></div>
+    <div class="feat reveal"><h3>Placement support</h3><p>Campus drives, partner referrals and job alerts. Coordinators stay with you after the course until you join.</p></div>
   </div>
 </section>
 
 <section class="section" id="placements">
-  <div class="head"><h2>From first class to first offer</h2></div>
+  <div class="head reveal">
+    <h2>From first class to first offer</h2>
+    <p>A four-step path most students finish in 4–6 months. Sample placement records below are dummy data for this demo site.</p>
+  </div>
   <ol class="steps">
-    <li><h3>Learn</h3><p>Trainer-led classes with daily practice.</p></li>
-    <li><h3>Build</h3><p>Two live projects for your portfolio.</p></li>
-    <li><h3>Prepare</h3><p>Resume review and mock interviews.</p></li>
-    <li><h3>Get hired</h3><p>Campus drives and partner referrals.</p></li>
+    <li class="reveal"><h3>Learn</h3><p>Trainer-led classes, daily assignments and weekend labs so concepts stick.</p></li>
+    <li class="reveal"><h3>Build</h3><p>Two live projects for your GitHub and a story you can walk through in interviews.</p></li>
+    <li class="reveal"><h3>Prepare</h3><p>Resume lab, aptitude, HR and technical mocks until your answers feel natural.</p></li>
+    <li class="reveal"><h3>Get hired</h3><p>Campus drives and partner referrals with follow-up until the offer letter arrives.</p></li>
   </ol>
+
+  <div class="placement-toolbar reveal">
+    <h3>Recent student placements</h3>
+    <div class="filters" id="placementFilters" role="tablist" aria-label="Filter placements by course">
+      <button class="chip is-on" data-filter="all">All</button>
+      <button class="chip" data-filter="Python Full Stack">Python</button>
+      <button class="chip" data-filter="Java Full Stack">Java</button>
+      <button class="chip" data-filter="Software Testing">Testing</button>
+      <button class="chip" data-filter="Data Science with Python">Data Science</button>
+      <button class="chip" data-filter="Web Development">Web</button>
+    </div>
+  </div>
+  <div class="place-grid" id="placeGrid"></div>
+  <p class="fine-print">Dummy sample records for design preview · not a guarantee of package or company.</p>
 </section>
 
-<section class="section band" id="stories">
-  <div class="head"><h2>Success stories</h2><p>Replace these with real student quotes, names and companies.</p></div>
-  <div class="grid three">
-    <figure class="quote"><blockquote>Student testimonial goes here. Mention the course and the job they got.</blockquote><figcaption><i>A</i><span>Student name<small>Role, Company</small></span></figcaption></figure>
-    <figure class="quote"><blockquote>Student testimonial goes here. Mention the course and the job they got.</blockquote><figcaption><i>B</i><span>Student name<small>Role, Company</small></span></figcaption></figure>
-    <figure class="quote"><blockquote>Student testimonial goes here. Mention the course and the job they got.</blockquote><figcaption><i>C</i><span>Student name<small>Role, Company</small></span></figcaption></figure>
+<section class="section celebration" id="celebrate">
+  <div class="cele-inner reveal">
+    <p class="eyebrow gold">Colour celebration</p>
+    <h2>Every offer is a campus celebration</h2>
+    <p>When a student gets placed, we share the win in class — confetti, a shout-out, and a next-batch story. Tap celebrate to see the room light up.</p>
+    <div class="cele-stats">
+      <div><b data-count="92" data-suffix="%">0</b><span>batch completion</span></div>
+      <div><b data-count="180" data-suffix="+">0</b><span>offers this year*</span></div>
+      <div><b data-count="12" data-suffix=" LPA">0</b><span>highest sample CTC*</span></div>
+    </div>
+    <button class="btn btn-gold" type="button" id="celebrateBtn">Celebrate a placement</button>
+    <p class="fine-print light">*Dummy celebration metrics for this interactive demo.</p>
   </div>
 </section>
 
+<section class="section band" id="stories">
+  <div class="head reveal">
+    <h2>Success stories</h2>
+    <p>Dummy testimonials so you can see how real student quotes will look. Replace these with approved names and companies before going live.</p>
+  </div>
+  <div class="story-wrap">
+    <button class="nav-arrow" type="button" id="storyPrev" aria-label="Previous story">‹</button>
+    <div class="story-track" id="storyTrack"></div>
+    <button class="nav-arrow" type="button" id="storyNext" aria-label="Next story">›</button>
+  </div>
+  <div class="dots" id="storyDots"></div>
+</section>
+
 <section class="section" id="faq">
-  <div class="head"><h2>Questions students ask</h2></div>
+  <div class="head reveal"><h2>Questions students ask</h2></div>
   <div class="faq">
-    <details><summary>Do I need a coding background?</summary><p>No. Our courses start from the basics, and a counsellor will suggest the right batch for your level.</p></details>
-    <details><summary>Is placement support included?</summary><p>Yes. Interview preparation and access to campus drives are part of every course.</p></details>
-    <details><summary>Can I attend online?</summary><p>Yes, online and classroom batches are available for most courses.</p></details>
-    <details><summary>How do I try a class first?</summary><p>Fill in the demo form. We will call you and schedule a free class.</p></details>
+    <details class="reveal"><summary>Do I need a coding background?</summary><p>No. Courses start from the basics. A counsellor will place you in a beginner or fast-track batch after a short call about your education and goals.</p></details>
+    <details class="reveal"><summary>Is placement support included?</summary><p>Yes. Interview preparation and access to campus drives are part of every course. Support continues after the batch until you accept an offer, subject to attendance and assignment completion.</p></details>
+    <details class="reveal"><summary>Can I attend online?</summary><p>Yes. Online and classroom batches run for most courses. You get the same projects, mocks and placement pipeline either way.</p></details>
+    <details class="reveal"><summary>How do I try a class first?</summary><p>Fill in the demo form. We call you, share batch timings, and schedule a free class so you can meet the trainer before you enrol.</p></details>
+    <details class="reveal"><summary>What is the typical fee and EMI?</summary><p>Fees vary by course and batch. Counsellors share the current fee, EMI options and any campus-drive scholarships on the demo call. Dummy figures are not listed here on purpose.</p></details>
+    <details class="reveal"><summary>Which branch should I pick?</summary><p>Karve Nagar, Hadapsar and Chinchwad serve Pune; Nagpur has its own campus. If you travel or work shifts, start online and switch to classroom for project week.</p></details>
   </div>
 </section>
 
 <section class="cta">
   <h2>Ready to start your IT career?</h2>
-  <p>Attend a free demo class and meet your trainers before you decide.</p>
-  <a href="#enquire" class="btn btn-orange">Book a free demo</a>
+  <p>Attend a free demo class, meet your trainers, and leave with a clear course map — before you pay anything.</p>
+  <a href="#enquire" class="btn btn-gold">Book a free demo</a>
 </section>
 </main>
 
 <footer id="branches">
   <div class="fgrid">
-    <div><a href="#" class="logo light"><i>K</i><span>Kiran Academy</span></a><p>IT training and placement institute in Pune since 2012.</p></div>
-    <div><h4>Branches</h4><p>Karve Nagar, Pune<br>Hadapsar, Pune<br>Chinchwad, Pune<br>Nagpur</p></div>
-    <div><h4>Call us</h4><p><a href="tel:+918888809416">+91 8888809416</a><br><a href="tel:+919673107070">+91 9673107070</a><br><a href="tel:+918857055009">+91 8857055009</a><br><a href="tel:+919529204783">+91 9529204783</a></p></div>
-    <div><h4>Quick links</h4><p><a href="#courses">Courses</a><br><a href="#stories">Success stories</a><br><a href="#faq">FAQ</a><br><a href="#enquire">Free demo</a></p></div>
+    <div>
+      <a href="#" class="logo light"><i>K</i><span>Kiran Academy</span></a>
+      <p>IT training and placement institute in Pune since 2012. Classroom and online batches for testing, Python, Java, web and data science.</p>
+    </div>
+    <div>
+      <h4>Branches</h4>
+      <p>Karve Nagar, Pune<br>Hadapsar, Pune<br>Chinchwad, Pune<br>Nagpur</p>
+    </div>
+    <div>
+      <h4>Call us</h4>
+      <p><a href="tel:+918888809416">+91 8888809416</a><br><a href="tel:+919673107070">+91 9673107070</a><br><a href="tel:+918857055009">+91 8857055009</a><br><a href="tel:+919529204783">+91 9529204783</a></p>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <p><a href="#courses">Courses</a><br><a href="#classroom">Classroom</a><br><a href="#stories">Success stories</a><br><a href="#faq">FAQ</a><br><a href="#enquire">Free demo</a></p>
+    </div>
   </div>
   <p class="copy">&copy; <span id="yr"></span> Kiran Academy. All rights reserved.</p>
 </footer>
